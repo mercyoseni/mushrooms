@@ -1,32 +1,31 @@
 class FilterMushroom
-  attr_reader :params
+  attr_reader :page
 
-  def initialize(params)
-    # pass params from the controller for paginate
-    @params = params
-    @mushroom_class = params[:filter][:mushroom_class]
-    @cap_shape = params[:filter][:cap_shape]
-    @cap_surface = params[:filter][:cap_surface]
-    @cap_color = params[:filter][:cap_color]
-    @bruises = params[:filter][:bruises]
-    @odor = params[:filter][:odor]
-    @gill_attachment = params[:filter][:gill_attachment]
-    @gill_spacing = params[:filter][:gill_spacing]
-    @gill_size = params[:filter][:gill_size]
-    @gill_color = params[:filter][:gill_color]
-    @stalk_shape = params[:filter][:stalk_shape]
-    @stalk_root = params[:filter][:stalk_root]
-    @stalk_surface_above_ring = params[:filter][:stalk_surface_above_ring]
-    @stalk_surface_below_ring = params[:filter][:stalk_surface_below_ring]
-    @stalk_color_above_ring = params[:filter][:stalk_color_above_ring]
-    @stalk_color_below_ring = params[:filter][:stalk_color_below_ring]
-    @veil_type = params[:filter][:veil_type]
-    @veil_color = params[:filter][:veil_color]
-    @ring_number = params[:filter][:ring_number]
-    @ring_type = params[:filter][:ring_type]
-    @spore_print_color = params[:filter][:spore_print_color]
-    @population = params[:filter][:population]
-    @habitat = params[:filter][:habitat]
+  def initialize(filter_params, page)
+    @page = page
+    @mushroom_class = filter_params[:mushroom_class]
+    @cap_shape = filter_params[:cap_shape]
+    @cap_surface = filter_params[:cap_surface]
+    @cap_color = filter_params[:cap_color]
+    @bruises = filter_params[:bruises]
+    @odor = filter_params[:odor]
+    @gill_attachment = filter_params[:gill_attachment]
+    @gill_spacing = filter_params[:gill_spacing]
+    @gill_size = filter_params[:gill_size]
+    @gill_color = filter_params[:gill_color]
+    @stalk_shape = filter_params[:stalk_shape]
+    @stalk_root = filter_params[:stalk_root]
+    @stalk_surface_above_ring = filter_params[:stalk_surface_above_ring]
+    @stalk_surface_below_ring = filter_params[:stalk_surface_below_ring]
+    @stalk_color_above_ring = filter_params[:stalk_color_above_ring]
+    @stalk_color_below_ring = filter_params[:stalk_color_below_ring]
+    @veil_type = filter_params[:veil_type]
+    @veil_color = filter_params[:veil_color]
+    @ring_number = filter_params[:ring_number]
+    @ring_type = filter_params[:ring_type]
+    @spore_print_color = filter_params[:spore_print_color]
+    @population = filter_params[:population]
+    @habitat = filter_params[:habitat]
   end
 
   def run
@@ -56,6 +55,6 @@ class FilterMushroom
     mushroom_ids << Mushroom.where(population: @population).pluck(:id) if @population.present?
     mushroom_ids << Mushroom.where(habitat: @habitat).pluck(:id) if @habitat.present?
 
-    Mushroom.where(id: mushroom_ids.flatten).page(params[:page])
+    Mushroom.where(id: mushroom_ids.flatten).page(page)
   end
 end
