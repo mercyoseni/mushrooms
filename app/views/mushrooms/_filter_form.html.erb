@@ -26,6 +26,15 @@
   <%# gill-size %>
   <%= render 'filter_option', field: :gill_size, placeholder: 'Select gill size' %>
 
+  <%# gill-color %>
+  <%= render 'filter_option', field: :gill_color, placeholder: 'Select gill color' %>
+
+  <%# stalk-shape %>
+  <%= render 'filter_option', field: :stalk_shape, placeholder: 'Select stalk shape' %>
+
+  <%# stalk-root %>
+  <%= render 'filter_option', field: :stalk_root, placeholder: 'Select stalk root' %>
+
   <%= f.submit 'Apply Filter', class: 'btn btn-large right' %>
   <%= link_to 'Reset', root_path, class: 'btn btn-large red reset' %>
 <% end %>
