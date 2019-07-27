@@ -4,10 +4,19 @@
     <%= render 'filter_form' %>
   </div>
 
-  <% if @mushrooms.present? %>
-    <div class='table-container col s8 m9'>
+  <div class='table-container col s8 m9'>
+    <% if @mushrooms.present? %>
       <%= render 'table' %>
       <%= paginate @mushrooms %>
-    </div>
-  <% end %>
+    <% elsif params[:filter].present? %>
+      <h5 class='title'>No results found. Try another filter.</h5>
+      <div class='image-container'>
+        <%= image_tag 'mushroom' %>
+      </div>
+    <% else %>
+      <div class='image-container'>
+        <%= image_tag 'mushroom-giphy' %>
+      </div>
+    <% end %>
+  </div>
 </div>
