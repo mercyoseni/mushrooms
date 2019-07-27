@@ -1,5 +1,4 @@
 require 'csv'
-require_relative 'mushroom_attributes_info'
 
 include MushroomAttributesInfo
 
