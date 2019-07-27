@@ -1,10 +1,14 @@
 <h3>Mushrooms</h3>
 
 <div class='row'>
-  <div class='col s3'>Filters
+  <div class='col s3'>
+    <h4>Filters</h4><hr>
     <%= render 'filter_form' %>
   </div>
-  <div class='table-container col s9'>
-    <%= render 'table' %>
-  </div>
+
+  <% if @mushrooms.present? %>
+    <div class='table-container col s9'>
+      <%= render 'table' %>
+    </div>
+  <% end %>
 </div>

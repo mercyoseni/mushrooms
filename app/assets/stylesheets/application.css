@@ -22,3 +22,11 @@
 .table-container {
   overflow: scroll;
 }
+
+.select-wrapper {
+  padding-top: 15px;
+}
+
+label {
+  font-size: 1.5em !important;
+}
