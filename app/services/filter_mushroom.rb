@@ -29,32 +29,32 @@ class FilterMushroom
   end
 
   def run
-    mushroom_ids = []
+    query = Mushroom.all
 
-    mushroom_ids << Mushroom.where(mushroom_class: @mushroom_class).pluck(:id) if @mushroom_class.present?
-    mushroom_ids << Mushroom.where(cap_shape: @cap_shape).pluck(:id) if @cap_shape.present?
-    mushroom_ids << Mushroom.where(cap_surface: @cap_surface).pluck(:id) if @cap_surface.present?
-    mushroom_ids << Mushroom.where(cap_color: @cap_color).pluck(:id) if @cap_color.present?
-    mushroom_ids << Mushroom.where(bruises: @bruises).pluck(:id) if @bruises.present?
-    mushroom_ids << Mushroom.where(odor: @odor).pluck(:id) if @odor.present?
-    mushroom_ids << Mushroom.where(gill_attachment: @gill_attachment).pluck(:id) if @gill_attachment.present?
-    mushroom_ids << Mushroom.where(gill_spacing: @gill_spacing).pluck(:id) if @gill_spacing.present?
-    mushroom_ids << Mushroom.where(gill_size: @gill_size).pluck(:id) if @gill_size.present?
-    mushroom_ids << Mushroom.where(gill_color: @gill_color).pluck(:id) if @gill_color.present?
-    mushroom_ids << Mushroom.where(stalk_shape: @stalk_shape).pluck(:id) if @stalk_shape.present?
-    mushroom_ids << Mushroom.where(stalk_root: @stalk_root).pluck(:id) if @stalk_root.present?
-    mushroom_ids << Mushroom.where(stalk_surface_above_ring: @stalk_surface_above_ring).pluck(:id) if @stalk_surface_above_ring.present?
-    mushroom_ids << Mushroom.where(stalk_surface_below_ring: @stalk_surface_below_ring).pluck(:id) if @stalk_surface_below_ring.present?
-    mushroom_ids << Mushroom.where(stalk_color_above_ring: @stalk_color_above_ring).pluck(:id) if @stalk_color_above_ring.present?
-    mushroom_ids << Mushroom.where(stalk_color_below_ring: @stalk_color_below_ring).pluck(:id) if @stalk_color_below_ring.present?
-    mushroom_ids << Mushroom.where(veil_type: @veil_type).pluck(:id) if @veil_type.present?
-    mushroom_ids << Mushroom.where(veil_color: @veil_color).pluck(:id) if @veil_color.present?
-    mushroom_ids << Mushroom.where(ring_number: @ring_number).pluck(:id) if @ring_number.present?
-    mushroom_ids << Mushroom.where(ring_type: @ring_type).pluck(:id) if @ring_type.present?
-    mushroom_ids << Mushroom.where(spore_print_color: @spore_print_color).pluck(:id) if @spore_print_color.present?
-    mushroom_ids << Mushroom.where(population: @population).pluck(:id) if @population.present?
-    mushroom_ids << Mushroom.where(habitat: @habitat).pluck(:id) if @habitat.present?
+    query = query.where(mushroom_class: @mushroom_class) if @mushroom_class.present?
+    query = query.where(cap_shape: @cap_shape) if @cap_shape.present?
+    query = query.where(cap_surface: @cap_surface) if @cap_surface.present?
+    query = query.where(cap_color: @cap_color) if @cap_color.present?
+    query = query.where(bruises: @bruises) if @bruises.present?
+    query = query.where(odor: @odor) if @odor.present?
+    query = query.where(gill_attachment: @gill_attachment) if @gill_attachment.present?
+    query = query.where(gill_spacing: @gill_spacing) if @gill_spacing.present?
+    query = query.where(gill_size: @gill_size) if @gill_size.present?
+    query = query.where(gill_color: @gill_color) if @gill_color.present?
+    query = query.where(stalk_shape: @stalk_shape) if @stalk_shape.present?
+    query = query.where(stalk_root: @stalk_root) if @stalk_root.present?
+    query = query.where(stalk_surface_above_ring: @stalk_surface_above_ring) if @stalk_surface_above_ring.present?
+    query = query.where(stalk_surface_below_ring: @stalk_surface_below_ring) if @stalk_surface_below_ring.present?
+    query = query.where(stalk_color_above_ring: @stalk_color_above_ring) if @stalk_color_above_ring.present?
+    query = query.where(stalk_color_below_ring: @stalk_color_below_ring) if @stalk_color_below_ring.present?
+    query = query.where(veil_type: @veil_type) if @veil_type.present?
+    query = query.where(veil_color: @veil_color) if @veil_color.present?
+    query = query.where(ring_number: @ring_number) if @ring_number.present?
+    query = query.where(ring_type: @ring_type) if @ring_type.present?
+    query = query.where(spore_print_color: @spore_print_color) if @spore_print_color.present?
+    query = query.where(population: @population) if @population.present?
+    query = query.where(habitat: @habitat) if @habitat.present?
 
-    Mushroom.where(id: mushroom_ids.flatten).page(page)
+    query.page(page)
   end
 end
