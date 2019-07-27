@@ -13,6 +13,12 @@
  *= require_tree .
  *= require_self
  */
+nav {
+  background-color: #010 !important;
+}
+nav .nav-wrapper {
+  padding-left: 30px;
+}
 
 .body-container {
   padding: 20px;
@@ -47,4 +53,13 @@ th, .title {
 
 label {
   font-size: 1.5em !important;
+}
+
+span.page, span.next, span.last {
+  font-size: 1.1em;
+  margin: 25px;
+}
+
+nav.pagination {
+  min-width: 153%;
 }
