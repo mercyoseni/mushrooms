@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+.body-container {
+  padding: 20px;
+  padding-right: 50px;
+}
+
+.table-container {
+  overflow: scroll;
+}
