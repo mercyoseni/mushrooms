@@ -1,6 +1,7 @@
 <table>
   <thead>
     <tr>
+      <th>#</th>
       <th>Class</th>
       <th>Cap Shape</th>
       <th>Cap Surface</th>
@@ -28,8 +29,13 @@
   </thead>
 
   <tbody>
+    <% row_count = 0 %>
+
     <% @mushrooms.each do |mushroom| %>
+      <% row_count += 1 %>
+
       <tr>
+        <th><%= row_count %></th>
         <td><%= mushroom.mushroom_class %></td>
         <td><%= mushroom.cap_shape %></td>
         <td><%= mushroom.cap_surface %></td>
