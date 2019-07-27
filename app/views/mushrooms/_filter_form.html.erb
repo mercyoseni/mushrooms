@@ -35,6 +35,15 @@
   <%# stalk-root %>
   <%= render 'filter_option', field: :stalk_root, placeholder: 'Select stalk root' %>
 
+  <%# stalk-surface-above-ring %>
+  <%= render 'filter_option', field: :stalk_surface_above_ring, placeholder: 'Select stalk surface above ring' %>
+
+  <%# stalk-surface-below-ring %>
+  <%= render 'filter_option', field: :stalk_surface_below_ring, placeholder: 'Select stalk surface below ring' %>
+
+  <%# stalk-color-above-ring %>
+  <%= render 'filter_option', field: :stalk_color_above_ring, placeholder: 'Select stalk color above ring' %>
+
   <%= f.submit 'Apply Filter', class: 'btn btn-large right' %>
   <%= link_to 'Reset', root_path, class: 'btn btn-large red reset' %>
 <% end %>
