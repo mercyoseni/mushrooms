@@ -44,6 +44,15 @@
   <%# stalk-color-above-ring %>
   <%= render 'filter_option', field: :stalk_color_above_ring, placeholder: 'Select stalk color above ring' %>
 
+  <%# stalk-color-below-ring %>
+  <%= render 'filter_option', field: :stalk_color_below_ring, placeholder: 'Select stalk color below ring' %>
+
+  <%# veil-type %>
+  <%= render 'filter_option', field: :veil_type, placeholder: 'Select veil type' %>
+
+  <%# veil-color %>
+  <%= render 'filter_option', field: :veil_color, placeholder: 'Select veil color' %>
+
   <%= f.submit 'Apply Filter', class: 'btn btn-large right' %>
   <%= link_to 'Reset', root_path, class: 'btn btn-large red reset' %>
 <% end %>

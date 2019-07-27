@@ -19,6 +19,9 @@ class FilterMushroom
     @stalk_surface_above_ring = params[:filter][:stalk_surface_above_ring]
     @stalk_surface_below_ring = params[:filter][:stalk_surface_below_ring]
     @stalk_color_above_ring = params[:filter][:stalk_color_above_ring]
+    @stalk_color_below_ring = params[:filter][:stalk_color_below_ring]
+    @veil_type = params[:filter][:veil_type]
+    @veil_color = params[:filter][:veil_color]
   end
 
   def run
@@ -39,6 +42,9 @@ class FilterMushroom
     mushroom_ids << Mushroom.where(stalk_surface_above_ring: @stalk_surface_above_ring).pluck(:id) if @stalk_surface_above_ring.present?
     mushroom_ids << Mushroom.where(stalk_surface_below_ring: @stalk_surface_below_ring).pluck(:id) if @stalk_surface_below_ring.present?
     mushroom_ids << Mushroom.where(stalk_color_above_ring: @stalk_color_above_ring).pluck(:id) if @stalk_color_above_ring.present?
+    mushroom_ids << Mushroom.where(stalk_color_below_ring: @stalk_color_below_ring).pluck(:id) if @stalk_color_below_ring.present?
+    mushroom_ids << Mushroom.where(veil_type: @veil_type).pluck(:id) if @veil_type.present?
+    mushroom_ids << Mushroom.where(veil_color: @veil_color).pluck(:id) if @veil_color.present?
 
     Mushroom.where(id: mushroom_ids.flatten).page(params[:page])
   end
