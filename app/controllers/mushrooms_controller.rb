@@ -1,0 +1,2 @@
+class MushroomsController < ApplicationController
+end
