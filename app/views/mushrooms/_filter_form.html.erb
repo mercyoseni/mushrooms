@@ -1,0 +1,79 @@
+<%= form_for :filter, url: root_path, method: 'GET', id: 'my-form' do |f| %>
+  <%# mushroom class %>
+  <%= render 'filter_option', field: :mushroom_class, placeholder: 'Select class' %>
+
+  <%# cap-shape %>
+  <%= render 'filter_option', field: :cap_shape, placeholder: 'Select cap shape' %>
+
+  <%# cap-surface %>
+  <%= render 'filter_option', field: :cap_surface, placeholder: 'Select cap surface' %>
+
+  <%# cap-color %>
+  <%= render 'filter_option', field: :cap_color, placeholder: 'Select cap color' %>
+
+  <%# bruises %>
+  <%= render 'filter_option', field: :bruises, placeholder: 'Select bruises' %>
+
+  <%# odor %>
+  <%= render 'filter_option', field: :odor, placeholder: 'Select odor' %>
+
+  <%# gill-attachment %>
+  <%= render 'filter_option', field: :gill_attachment, placeholder: 'Select gill attachment' %>
+
+  <%# gill-spacing %>
+  <%= render 'filter_option', field: :gill_spacing, placeholder: 'Select gill spacing' %>
+
+  <%# gill-size %>
+  <%= render 'filter_option', field: :gill_size, placeholder: 'Select gill size' %>
+
+  <%# gill-color %>
+  <%= render 'filter_option', field: :gill_color, placeholder: 'Select gill color' %>
+
+  <%# stalk-shape %>
+  <%= render 'filter_option', field: :stalk_shape, placeholder: 'Select stalk shape' %>
+
+  <%# stalk-root %>
+  <%= render 'filter_option', field: :stalk_root, placeholder: 'Select stalk root' %>
+
+  <%# stalk-surface-above-ring %>
+  <%= render 'filter_option', field: :stalk_surface_above_ring, placeholder: 'Select stalk surface above ring' %>
+
+  <%# stalk-surface-below-ring %>
+  <%= render 'filter_option', field: :stalk_surface_below_ring, placeholder: 'Select stalk surface below ring' %>
+
+  <%# stalk-color-above-ring %>
+  <%= render 'filter_option', field: :stalk_color_above_ring, placeholder: 'Select stalk color above ring' %>
+
+  <%# stalk-color-below-ring %>
+  <%= render 'filter_option', field: :stalk_color_below_ring, placeholder: 'Select stalk color below ring' %>
+
+  <%# veil-type %>
+  <%= render 'filter_option', field: :veil_type, placeholder: 'Select veil type' %>
+
+  <%# veil-color %>
+  <%= render 'filter_option', field: :veil_color, placeholder: 'Select veil color' %>
+
+  <%# ring-number %>
+  <%= render 'filter_option', field: :ring_number, placeholder: 'Select ring number' %>
+
+  <%# ring-type %>
+  <%= render 'filter_option', field: :ring_type, placeholder: 'Select ring type' %>
+
+  <%# spore-print-color %>
+  <%= render 'filter_option', field: :spore_print_color, placeholder: 'Select spore print color' %>
+
+  <%# population %>
+  <%= render 'filter_option', field: :population, placeholder: 'Select population' %>
+
+  <%# habitat %>
+  <%= render 'filter_option', field: :habitat, placeholder: 'Select habitat' %>
+
+  <%= f.submit 'Apply Filter', class: 'btn btn-large right' %>
+  <%= link_to 'Reset', root_path, class: 'btn btn-large red reset' %>
+<% end %>
+
+<script>
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
+</script>

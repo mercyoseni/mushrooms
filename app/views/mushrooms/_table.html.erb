@@ -1,0 +1,65 @@
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Class</th>
+      <th>Cap Shape</th>
+      <th>Cap Surface</th>
+      <th>Cap Color</th>
+      <th>Bruises</th>
+      <th>Odor</th>
+      <th>Gill Attachment</th>
+      <th>Gill Spacing</th>
+      <th>Gill Size</th>
+      <th>Gill Color</th>
+      <th>Stalk Shape</th>
+      <th>Stalk Root</th>
+      <th>Stalk Surface Above Ring</th>
+      <th>Stalk Surface Below Ring</th>
+      <th>Stalk Color Above Ring</th>
+      <th>Stalk Color Below Ring</th>
+      <th>Veil Type</th>
+      <th>Veil Color</th>
+      <th>Ring Number</th>
+      <th>Ring Type</th>
+      <th>Spore Print Color</th>
+      <th>Population</th>
+      <th>Habitat</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% row_count = @mushrooms.limit_value * (@mushrooms.current_page - 1)%>
+
+    <% @mushrooms.each do |mushroom| %>
+      <% row_count += 1 %>
+
+      <tr>
+        <th><%= row_count %></th>
+        <td><%= mushroom.mushroom_class %></td>
+        <td><%= mushroom.cap_shape %></td>
+        <td><%= mushroom.cap_surface %></td>
+        <td><%= mushroom.cap_color %></td>
+        <td><%= mushroom.bruises %></td>
+        <td><%= mushroom.odor %></td>
+        <td><%= mushroom.gill_attachment %></td>
+        <td><%= mushroom.gill_spacing %></td>
+        <td><%= mushroom.gill_size %></td>
+        <td><%= mushroom.gill_color %></td>
+        <td><%= mushroom.stalk_shape %></td>
+        <td><%= mushroom.stalk_root %></td>
+        <td><%= mushroom.stalk_surface_above_ring %></td>
+        <td><%= mushroom.stalk_surface_below_ring %></td>
+        <td><%= mushroom.stalk_color_above_ring %></td>
+        <td><%= mushroom.stalk_color_below_ring %></td>
+        <td><%= mushroom.veil_type %></td>
+        <td><%= mushroom.veil_color %></td>
+        <td><%= mushroom.ring_number %></td>
+        <td><%= mushroom.ring_type %></td>
+        <td><%= mushroom.spore_print_color %></td>
+        <td><%= mushroom.population %></td>
+        <td><%= mushroom.habitat %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
