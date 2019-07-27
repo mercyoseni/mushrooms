@@ -17,6 +17,15 @@
   <%# odor %>
   <%= render 'filter_option', field: :odor, placeholder: 'Select odor' %>
 
+  <%# gill-attachment %>
+  <%= render 'filter_option', field: :gill_attachment, placeholder: 'Select gill attachment' %>
+
+  <%# gill-spacing %>
+  <%= render 'filter_option', field: :gill_spacing, placeholder: 'Select gill spacing' %>
+
+  <%# gill-size %>
+  <%= render 'filter_option', field: :gill_size, placeholder: 'Select gill size' %>
+
   <%= f.submit 'Apply Filter', class: 'btn btn-large right' %>
   <%= link_to 'Reset', root_path, class: 'btn btn-large red reset' %>
 <% end %>

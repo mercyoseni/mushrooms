@@ -10,6 +10,9 @@ class FilterMushroom
     @cap_color = params[:filter][:cap_color]
     @bruises = params[:filter][:bruises]
     @odor = params[:filter][:odor]
+    @gill_attachment = params[:filter][:gill_attachment]
+    @gill_spacing = params[:filter][:gill_spacing]
+    @gill_size = params[:filter][:gill_size]
   end
 
   def run
@@ -21,6 +24,9 @@ class FilterMushroom
     mushroom_ids << Mushroom.where(cap_color: @cap_color).pluck(:id) if @cap_color.present?
     mushroom_ids << Mushroom.where(bruises: @bruises).pluck(:id) if @bruises.present?
     mushroom_ids << Mushroom.where(odor: @odor).pluck(:id) if @odor.present?
+    mushroom_ids << Mushroom.where(gill_attachment: @gill_attachment).pluck(:id) if @gill_attachment.present?
+    mushroom_ids << Mushroom.where(gill_spacing: @gill_spacing).pluck(:id) if @gill_spacing.present?
+    mushroom_ids << Mushroom.where(gill_size: @gill_size).pluck(:id) if @gill_size.present?
 
     Mushroom.where(id: mushroom_ids.flatten).page(params[:page])
   end
