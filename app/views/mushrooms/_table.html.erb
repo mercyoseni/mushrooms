@@ -29,7 +29,7 @@
   </thead>
 
   <tbody>
-    <% row_count = 0 %>
+    <% row_count = @mushrooms.limit_value * (@mushrooms.current_page - 1)%>
 
     <% @mushrooms.each do |mushroom| %>
       <% row_count += 1 %>
