@@ -9,6 +9,7 @@
   <% if @mushrooms.present? %>
     <div class='table-container col s9'>
       <%= render 'table' %>
+      <%= paginate @mushrooms %>
     </div>
   <% end %>
 </div>

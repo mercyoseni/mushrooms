@@ -4,7 +4,8 @@ class MushroomsController < ApplicationController
     @mushrooms = []
 
     if params[:filter].present?
-      @mushrooms = FilterMushroom.new(params[:filter]).run
+      # pass params to the service, so it can access params[:page]
+      @mushrooms = FilterMushroom.new(params).run
     end
   end
 end
