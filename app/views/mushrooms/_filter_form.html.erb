@@ -62,6 +62,12 @@
   <%# spore-print-color %>
   <%= render 'filter_option', field: :spore_print_color, placeholder: 'Select spore print color' %>
 
+  <%# population %>
+  <%= render 'filter_option', field: :population, placeholder: 'Select population' %>
+
+  <%# habitat %>
+  <%= render 'filter_option', field: :habitat, placeholder: 'Select habitat' %>
+
   <%= f.submit 'Apply Filter', class: 'btn btn-large right' %>
   <%= link_to 'Reset', root_path, class: 'btn btn-large red reset' %>
 <% end %>

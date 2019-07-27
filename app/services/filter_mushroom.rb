@@ -25,6 +25,8 @@ class FilterMushroom
     @ring_number = params[:filter][:ring_number]
     @ring_type = params[:filter][:ring_type]
     @spore_print_color = params[:filter][:spore_print_color]
+    @population = params[:filter][:population]
+    @habitat = params[:filter][:habitat]
   end
 
   def run
@@ -51,6 +53,8 @@ class FilterMushroom
     mushroom_ids << Mushroom.where(ring_number: @ring_number).pluck(:id) if @ring_number.present?
     mushroom_ids << Mushroom.where(ring_type: @ring_type).pluck(:id) if @ring_type.present?
     mushroom_ids << Mushroom.where(spore_print_color: @spore_print_color).pluck(:id) if @spore_print_color.present?
+    mushroom_ids << Mushroom.where(population: @population).pluck(:id) if @population.present?
+    mushroom_ids << Mushroom.where(habitat: @habitat).pluck(:id) if @habitat.present?
 
     Mushroom.where(id: mushroom_ids.flatten).page(params[:page])
   end
