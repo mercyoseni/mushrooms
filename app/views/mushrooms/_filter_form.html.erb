@@ -53,6 +53,15 @@
   <%# veil-color %>
   <%= render 'filter_option', field: :veil_color, placeholder: 'Select veil color' %>
 
+  <%# ring-number %>
+  <%= render 'filter_option', field: :ring_number, placeholder: 'Select ring number' %>
+
+  <%# ring-type %>
+  <%= render 'filter_option', field: :ring_type, placeholder: 'Select ring type' %>
+
+  <%# spore-print-color %>
+  <%= render 'filter_option', field: :spore_print_color, placeholder: 'Select spore print color' %>
+
   <%= f.submit 'Apply Filter', class: 'btn btn-large right' %>
   <%= link_to 'Reset', root_path, class: 'btn btn-large red reset' %>
 <% end %>
