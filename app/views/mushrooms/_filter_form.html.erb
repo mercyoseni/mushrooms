@@ -1,0 +1,13 @@
+<%= form_for :filter, url: root_path, method: 'GET', id: 'my-form' do |f| %>
+  <%# Mushroom class %>
+  <%= render 'filter_option', field: :mushroom_class, placeholder: 'Select class' %>
+
+  <%= f.submit 'Apply Filter', class: 'btn btn-large right' %>
+  <%= link_to 'Reset', root_path, class: 'btn btn-large red reset' %>
+<% end %>
+
+<script>
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
+</script>

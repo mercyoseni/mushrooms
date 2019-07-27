@@ -1,5 +1,10 @@
 class MushroomsController < ApplicationController
+
   def index
-    @mushrooms = Mushroom.limit(10)
+    @mushrooms = []
+
+    if params[:filter].present?
+      @mushrooms = FilterMushroom.new(params[:filter]).run
+    end
   end
 end
