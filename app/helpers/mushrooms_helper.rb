@@ -8,7 +8,7 @@ module MushroomsHelper
   def filter_selected?(key, value)
     if params[:filter].blank?
       ''
-    elsif params[:filter][key].include?(value)
+    elsif params[:filter][key]&.include?(value)
       'selected'
     else
     end
