@@ -5,6 +5,18 @@
   <%# cap-shape %>
   <%= render 'filter_option', field: :cap_shape, placeholder: 'Select cap shape' %>
 
+  <%# cap-surface %>
+  <%= render 'filter_option', field: :cap_surface, placeholder: 'Select cap surface' %>
+
+  <%# cap-color %>
+  <%= render 'filter_option', field: :cap_color, placeholder: 'Select cap color' %>
+
+  <%# bruises %>
+  <%= render 'filter_option', field: :bruises, placeholder: 'Select bruises' %>
+
+  <%# odor %>
+  <%= render 'filter_option', field: :odor, placeholder: 'Select odor' %>
+
   <%= f.submit 'Apply Filter', class: 'btn btn-large right' %>
   <%= link_to 'Reset', root_path, class: 'btn btn-large red reset' %>
 <% end %>
