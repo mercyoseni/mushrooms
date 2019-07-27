@@ -19,8 +19,26 @@
   padding-right: 50px;
 }
 
-.table-container {
+.table-container, .filters {
+  height: 100vh;
   overflow: scroll;
+}
+
+thead th, .title {
+  position: sticky;
+  top: 0;
+}
+
+th, td {
+  padding: 8px 16px;
+}
+
+th, .title {
+  background:#eee;
+}
+
+.title {
+  padding: 15px;
 }
 
 .select-wrapper {
