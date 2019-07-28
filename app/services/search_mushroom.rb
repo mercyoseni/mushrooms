@@ -10,6 +10,7 @@ class SearchMushroom
         ' ',
         mushroom_class,
         cap_shape,
+        cap_surface,
         cap_color,
         bruises,
         odor,
