@@ -1,15 +1,22 @@
-<h3>Mushrooms</h3>
-
 <div class='row'>
-  <div class='col s3 filters'>
+  <div class='col s4 m3 filters'>
     <div class='title'><h4>Filters<h4></div><hr>
     <%= render 'filter_form' %>
   </div>
 
-  <% if @mushrooms.present? %>
-    <div class='table-container col s9'>
+  <div class='table-container col s8 m9'>
+    <% if @mushrooms.present? %>
       <%= render 'table' %>
       <%= paginate @mushrooms %>
-    </div>
-  <% end %>
+    <% elsif params[:filter].present? %>
+      <h5 class='title'>No results found. Try another filter.</h5>
+      <div class='image-container'>
+        <%= image_tag 'mushroom' %>
+      </div>
+    <% else %>
+      <div class='image-container'>
+        <%= image_tag 'mushroom-giphy' %>
+      </div>
+    <% end %>
+  </div>
 </div>

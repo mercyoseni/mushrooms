@@ -13,6 +13,12 @@
  *= require_tree .
  *= require_self
  */
+nav {
+  background-color: #010 !important;
+}
+nav .nav-wrapper {
+  padding-left: 30px;
+}
 
 .body-container {
   padding: 20px;
@@ -39,6 +45,7 @@ th, .title {
 
 .title {
   padding: 15px;
+  z-index: 2;
 }
 
 .select-wrapper {
@@ -46,5 +53,54 @@ th, .title {
 }
 
 label {
-  font-size: 1.5em !important;
+  font-size: 18px !important;
+}
+
+span.page, span.next, span.last {
+  font-size: 1.1em;
+  margin: 25px;
+}
+
+nav.pagination {
+  width: 600px;
+  border-radius: 40px;
+  margin-top: 15px;
+}
+
+.btn {
+  border-radius: 20px !important;
+}
+
+@media screen and (max-width: 600px) {
+  label {
+    font-size: 12px !important;
+  }
+
+  .placeholder {
+    font-size: 8px !important;
+  }
+
+  .btn {
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 12px !important;
+  }
+
+  h4, h5 {
+    font-size: 20px !important;
+    margin: 0 !important;
+  }
+
+  .title {
+    padding: 10px;
+  }
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 60%;
 }
