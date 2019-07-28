@@ -37,4 +37,28 @@ RSpec.describe MushroomsHelper, type: :helper do
       end
     end
   end
+
+  describe '#search_query' do
+    context 'when search and query params are present' do
+      it 'returns the query' do
+        params[:search] = { query: 'edible' }
+
+        expect(search_query).to eq('edible')
+      end
+    end
+
+    context 'when search and query params are NOT present' do
+      it 'returns nil' do
+        expect(search_query).to be_nil
+      end
+    end
+
+    context 'when query params is NOT present' do
+      it 'returns nil' do
+        params = { search: {  } }
+
+        expect(search_query).to be_nil
+      end
+    end
+  end
 end
