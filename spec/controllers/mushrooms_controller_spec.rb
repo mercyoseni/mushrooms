@@ -11,7 +11,7 @@ RSpec.describe MushroomsController, type: :controller do
 
     context 'when filter params is present' do
       let(:params) do
-        { filter: { 'odor' => 'almond' }, 'page': '1' }
+        { filter: { 'odor' => 'almond' }, page: '1' }
       end
 
       let(:filter_mushroom) do
@@ -19,7 +19,8 @@ RSpec.describe MushroomsController, type: :controller do
       end
 
       it 'runs the FilterMushroom service' do
-        expect(FilterMushroom).to receive(:new).with(params[:filter], '1')
+        expect(FilterMushroom).to receive(:new)
+          .with(params[:filter], params[:page])
           .and_return(filter_mushroom)
 
         get :index, params: params
