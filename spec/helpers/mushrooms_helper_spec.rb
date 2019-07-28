@@ -24,7 +24,7 @@ RSpec.describe MushroomsHelper, type: :helper do
 
   describe '#filter_selected?' do
     context 'when filter params is present' do
-      it 'returns an empty string' do
+      it "returns 'selected'" do
         params[:filter] = { odor: 'fishy' }
 
         expect(filter_selected?(:odor, 'fishy')).to eq('selected')

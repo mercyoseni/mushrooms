@@ -1,5 +1,5 @@
 <div class='input-field col s12'>
-  <select name='filter[<%= field.to_s %>][]' multiple>
+  <select name='filter[<%= field.to_s %>][]' id=<%= field.to_s %> multiple>
     <option value='' class='placeholder' disabled><%= placeholder %></option>
     <% mushroom_attributes_values(field).each do |value| %>
       <option <%= filter_selected?(field, value) %> value=<%= value %>>

@@ -51,31 +51,5 @@ FactoryBot.define do
       population { 'scattered' }
       habitat { 'urban' }
     end
-
-    trait :invalid do
-      mushroom_class { '' }
-      cap_shape { 'convex' }
-      cap_surface { 'smooth' }
-      cap_color { '' }
-      bruises { 'bruises' }
-      odor { 'pungent' }
-      gill_attachment { 'free' }
-      gill_spacing { 'close' }
-      gill_size { 'narrow' }
-      gill_color { 'black' }
-      stalk_shape { 'enlarging' }
-      stalk_root { 'equal' }
-      stalk_surface_above_ring { 'smooth' }
-      stalk_surface_below_ring { 'smooth' }
-      stalk_color_above_ring { 'white' }
-      stalk_color_below_ring { 'white' }
-      veil_type { 'partial' }
-      veil_color { 'white' }
-      ring_number { 'one' }
-      ring_type { 'pendant' }
-      spore_print_color { 'black' }
-      population { 'scattered' }
-      habitat { 'urban' }
-    end
   end
 end

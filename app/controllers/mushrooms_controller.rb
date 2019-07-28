@@ -1,5 +1,4 @@
 class MushroomsController < ApplicationController
-
   def index
     @mushrooms = []
 
