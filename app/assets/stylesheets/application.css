@@ -25,7 +25,14 @@ nav .nav-wrapper {
   padding-right: 50px;
 }
 
-.table-container, .filters {
+.table-container {
+  height: 100vh;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+.filters {
   height: 100vh;
   overflow: scroll;
 }
@@ -103,4 +110,20 @@ nav.pagination {
 
 img {
   width: 60%;
+}
+
+.search {
+  display: flex;
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-bottom: 20px !important;
+}
+
+.search-btn {
+  margin-left: 25px;
+}
+
+#search_query {
+  background-color: #eee;
+  padding: 0 15px;
 }
