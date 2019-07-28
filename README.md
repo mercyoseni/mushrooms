@@ -5,10 +5,11 @@
 
 ## App Main functionalities:
 - From the data provided from UCI Machine Learning repository, mushroom has twenty-three(23) attributes.
-- Each attributes is also classified into its own sub attributes.
-- You can filter mushrooms based on the sub attributes then click on the `Apply Filter` button to view the results in tabular form.
-- Filter results is paginated; 25 rows per page.
-- You can `Reset` the filter(s) by clicking on the `Reset` button.
+- Each attributes is also classified into its own sub fields.
+- You can filter mushrooms based on the sub fields then click on the `Apply Filter` button to view the results in tabular form.
+- You can search on all fields for a match with the search terms; search terms can be separated by commas.
+- You can `Reset` the filter(s)/search by clicking on the `Reset` button.
+- Filter and Search results are paginated; 25 rows per page.
 
 | Mushroom class | Cap Shape | Cap Surface | Cap Color | Bruises | Odor | Gill Attachment |  Gill Spacing | Gill Size | Gill Color | Stalk Shape | Stalk Root | Stalk Surface Above Ring | Stalk Surface Below Ring | Stalk Color Above Ring | Stalk Color Below Ring | Veil Type | Veil Color | Ring Number | Ring Type | Spore Print Color | Population | Habitat |
 |--- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -53,6 +54,13 @@
 ### **Pagination**
 <img width="1375" alt="Screenshot 2019-07-28 at 12 28 14 AM" src="https://user-images.githubusercontent.com/26272984/62000429-a042e180-b0ce-11e9-96c9-22f18eb92f53.png">
 
+### **Search**
+<img width="1436" alt="Screenshot 2019-07-28 at 10 57 05 PM" src="https://user-images.githubusercontent.com/26272984/62013569-47d21980-b18c-11e9-8f53-c95c92ce1b32.png">
+
+<img width="1397" alt="Screenshot 2019-07-28 at 11 03 34 PM" src="https://user-images.githubusercontent.com/26272984/62013570-486ab000-b18c-11e9-8059-94a54a55d5b8.png">
+
+## Limitations
+- The app is not mobile responsive
 
 ## References
 - [Mushroom Dataset on Kaggle](https://www.kaggle.com/uciml/mushroom-classification#mushrooms.csv)
