@@ -34,5 +34,31 @@ RSpec.describe MushroomsController, type: :controller do
         get :index
       end
     end
+
+    context 'when search query is present' do
+      let(:params) do
+        { search: { query: 'almond' }, page: '1' }
+      end
+
+      let(:search_mushroom) do
+        instance_double('SearchMushroom', run: Mushroom.none)
+      end
+
+      it 'runs the SearchMushroom service' do
+        expect(SearchMushroom).to receive(:new)
+          .with(params[:search][:query], params[:page])
+          .and_return(search_mushroom)
+
+        get :index, params: params
+      end
+    end
+
+    context 'when search query is NOT present' do
+      it 'does NOT run the SearchMushroom service' do
+        expect(SearchMushroom).not_to receive(:new)
+
+        get :index
+      end
+    end
   end
 end
