@@ -1,11 +1,11 @@
 class MushroomsController < ApplicationController
+  include MushroomsHelper
+
   def index
     @mushrooms = []
 
-    # binding.pry
-
-    if params[:search].present?
-      @mushrooms = SearchMushroom.new(params[:search], params[:page]).run
+    if search_query.present?
+      @mushrooms = SearchMushroom.new(search_query, params[:page]).run
     end
 
     if params[:filter].present?

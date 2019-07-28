@@ -12,4 +12,8 @@ module MushroomsHelper
       'selected'
     end
   end
+
+  def search_query
+    params[:search] && params[:search][:query]
+  end
 end
