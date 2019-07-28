@@ -3,9 +3,12 @@
 ### An app where you can filter different types of mushrooms that meet specific attributes.
 #### Check out [Mushrooms on heroku](https://filter-mushrooms.herokuapp.com/)
 
-#### App Main functionalities:
+## App Main functionalities:
 - From the data provided from UCI Machine Learning repository, mushroom has twenty-three(23) attributes.
-- Each attributes is also classified into its own sub attributes
+- Each attributes is also classified into its own sub attributes.
+- You can filter mushrooms based on the sub attributes then click on the `Apply Filter` button to view the results in tabular form.
+- Filter results is paginated; 25 rows per page.
+- You can `Reset` the filter(s) by clicking on the `Reset` button.
 
 | Mushroom class | Cap Shape | Cap Surface | Cap Color | Bruises | Odor | Gill Attachment |  Gill Spacing | Gill Size | Gill Color | Stalk Shape | Stalk Root | Stalk Surface Above Ring | Stalk Surface Below Ring | Stalk Color Above Ring | Stalk Color Below Ring | Veil Type | Veil Color | Ring Number | Ring Type | Spore Print Color | Population | Habitat |
 |--- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -52,5 +55,5 @@
 
 
 ## References
-[Mushroom Dataset on Kaggle](https://www.kaggle.com/uciml/mushroom-classification#mushrooms.csv)
-[Mushroom Dataset on UCI ML Repository](https://archive.ics.uci.edu/ml/datasets/Mushroom)
+- [Mushroom Dataset on Kaggle](https://www.kaggle.com/uciml/mushroom-classification#mushrooms.csv)
+- [Mushroom Dataset on UCI ML Repository](https://archive.ics.uci.edu/ml/datasets/Mushroom)
