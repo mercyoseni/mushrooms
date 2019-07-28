@@ -10,7 +10,6 @@ module MushroomsHelper
       ''
     elsif params[:filter][key]&.include?(value)
       'selected'
-    else
     end
   end
 end

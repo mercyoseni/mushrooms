@@ -43,7 +43,7 @@ CSV.foreach('mushrooms.csv', headers: true) do |row|
     }
   ]
 
-  imported_mushrooms = Mushroom.import mushrooms, batch_size: 1000
+  imported_mushrooms = Mushroom.import mushrooms, validate: true
 
   imported_mushrooms.failed_instances.each do |failure|
     failed_row_count += 1
