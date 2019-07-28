@@ -1,24 +1,56 @@
-# README
+# MUSHROOMS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### An app where you can filter different types of mushrooms that meet specific attributes.
+#### Check out [Mushrooms on heroku](https://filter-mushrooms.herokuapp.com/)
 
-Things you may want to cover:
+#### App Main functionalities:
+- From the data provided from UCI Machine Learning repository, mushroom has twenty-three(23) attributes.
+- Each attributes is also classified into its own sub attributes
 
-* Ruby version
+| Mushroom class | Cap Shape | Cap Surface | Cap Color | Bruises | Odor | Gill Attachment |  Gill Spacing | Gill Size | Gill Color | Stalk Shape | Stalk Root | Stalk Surface Above Ring | Stalk Surface Below Ring | Stalk Color Above Ring | Stalk Color Below Ring | Veil Type | Veil Color | Ring Number | Ring Type | Spore Print Color | Population | Habitat |
+|--- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| e - edible | b - bell | f - fibrous | n - brown | t - bruises | a - almond | a - attached | c - close | b - broad | k - black | e - enlarging | b - bulbous | f - fibrous | f - fibrous | n - brown | n - brown | p - partial | n - brown | n - none | c - cobwebby | k - black | a - abundant | g - grasses
+| p - poisonous | c - conical | g - grooves | b - buff | f - no | l - anise | d - descending | w - crowded | n - narrow | n - brown | t - tapering | c - club | y - scaly | y - scaly | b - buff | b - buff | u - universal | o - orange | o - one | e - evanescent | n - brown | c - clustered | l - leaves
+| - | x - convex | y - scaly | c - cinnamon | - | c - creosote | f - free | d - distant | - | b - buff  | - | u - cup | k - silky | k - silky | c - cinnamon | c - cinnamon | - | w - white | t - two | f - flaring | b - buff | n - numerous | m - meadows
+| - | f - flat | s - smooth | g - gray | - | y - fishy | n - notched | - | - | h - chocolate  | - | e - equal | s - smooth | s - smooth | g - gray | g - gray | - | y - yellow | - | l - large | h - chocolate | s - scattered | p - paths
+| - | k - knobbed | - | r - green | - | f - foul | - | - | - | g - gray  | - | z - rhizomorphs | - | - | o - orange | o - orange | - | - | - | n - none | r - green | v - several | u - urban
+| - | s - sunken | - | p - pink | - | m - musty | - | - | - | r - green  | - | r - rooted | - | - | p - pink | p - pink | - | - | - | p - pendant | o - orange | y - solitary | w - waste
+| - | - | - | u - purple | - | n - none | - | - | - | o - orange  | - | ? - missing | - | - | e - red | e - red | - | - | - | s - sheathing | u - purple | - | d - woods
+| - | - | - | e - red | - | p - pungent | - | - | - | p - pink  | - | - | - | - | w - white | w - white | - | - | - | z - zone | w - white | - | -
+| - | - | - | w - white | - | s - spicy | - | - | - | u - purple  | - | - | - | - | y - yellow | y - yellow | - | - | - | - | y - yellow | - | -
+| - | - | - | y - yellow | - | - | - | - | - | e - red  | - | - | - | - |  -| - | - |  -|  -|  -|  -|  -| -
+| - |-  | - | - | - |-  | - |-  | - | w - white  | - |  -|  -| - |  -| - | - | - | - |  -|-  | - | -
+| - |-  | - | - | - | - | - | - | - | y - yellow  | - | - | - | - | - |-  | - | - |  -| - | - |-  | -
 
-* System dependencies
 
-* Configuration
+## Getting Started
+- To clone the app, run `git clone https://github.com/mercyoseni/mushrooms.git`
+- Checkout to the app's directory, run `cd mushrooms`
+- Run `bundle install` to install gem dependencies
+- Run `rails db:setup` to create databases, run migrations, and seeds
+- Run `rails s` to start the server, navigate to `http://localhost:3000`
 
-* Database creation
+## Tests
+- To run the tests, run `rspec spec`
 
-* Database initialization
+## Screenshots:
 
-* How to run the test suite
+### **Homepage - When no filtering**
+<img width="1438" alt="Screenshot 2019-07-28 at 12 15 52 AM" src="https://user-images.githubusercontent.com/26272984/62000403-e3508500-b0cd-11e9-9fc7-d111d0c01994.png">
 
-* Services (job queues, cache servers, search engines, etc.)
+### **Homepage - Display of `Reset` and `Apply Filter` button**
+<img width="1129" alt="Screenshot 2019-07-28 at 12 16 24 AM" src="https://user-images.githubusercontent.com/26272984/62000404-e3508500-b0cd-11e9-9e69-a67236b37d31.png">
 
-* Deployment instructions
+### **When no records found from filtering**
+<img width="1437" alt="Screenshot 2019-07-28 at 12 06 33 AM" src="https://user-images.githubusercontent.com/26272984/62000400-e2b7ee80-b0cd-11e9-9a9b-a7259509912f.png">
 
-* ...
+### **When records is found from filtering**
+<img width="1418" alt="Screenshot 2019-07-28 at 12 15 22 AM" src="https://user-images.githubusercontent.com/26272984/62000401-e2b7ee80-b0cd-11e9-9e6c-c7ffba6703db.png">
+
+### **Pagination**
+<img width="1375" alt="Screenshot 2019-07-28 at 12 28 14 AM" src="https://user-images.githubusercontent.com/26272984/62000429-a042e180-b0ce-11e9-96c9-22f18eb92f53.png">
+
+
+## References
+[Mushroom Dataset on Kaggle](https://www.kaggle.com/uciml/mushroom-classification#mushrooms.csv)
+[Mushroom Dataset on UCI ML Repository](https://archive.ics.uci.edu/ml/datasets/Mushroom)
