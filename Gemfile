@@ -29,9 +29,14 @@ group :development do
 end
 
 group :test do
-  gem 'capybara', '>= 2.15'
+  gem 'capybara'
   gem 'selenium-webdriver'
-  gem 'chromedriver-helper'
+  gem 'webdrivers', '~> 4.0'
+  gem 'rspec-rails', '~> 3.6'
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
+  gem 'headless'
+  gem 'database_cleaner'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
