@@ -56,13 +56,13 @@ label {
   font-size: 18px !important;
 }
 
-span.page, span.next, span.last {
+span.page, span.next, span.last, span.first, span.prev {
   font-size: 1.1em;
   margin: 25px;
 }
 
 nav.pagination {
-  width: 600px;
+  width: 1000px;
   border-radius: 40px;
   margin-top: 15px;
 }
