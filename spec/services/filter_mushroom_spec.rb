@@ -210,5 +210,15 @@ RSpec.describe FilterMushroom, type: :service do
         end
       end
     end
+
+    context 'page param' do
+      let(:page) { 10 }
+
+      it 'paginates the results with the param' do
+        expect(Mushroom).to receive(:page).with(page)
+
+        FilterMushroom.new({ }, page).run
+      end
+    end
   end
 end
