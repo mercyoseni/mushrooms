@@ -1,12 +1,7 @@
 <%= form_for :search, url: root_path, method: 'GET' do |f| %>
-  <div class='input-field col s12'>
-    <%= f.text_field :query, value: '' %>
-    <%# <div class="input-field">
-      <input name='query[]' id="query[]" type="search" required>
-      <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-      <i class="material-icons">close</i>
-    </div> %>
-
-    <%= f.submit 'Search', class: 'btn right' %>
+  <div class='input-field col s12 search'>
+    <%= f.text_field :query, value: search_query, required: true %>
+    <%= f.submit 'Search', class: 'btn right search-btn' %>
+    <%= link_to 'Reset', root_path, class: 'btn red search-btn ' %>
   </div>
 <% end %>

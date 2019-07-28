@@ -1,16 +1,16 @@
 <div class='row'>
-  <%= render 'search_form' %>
-
   <div class='col s4 m3 filters'>
     <div class='title'><h4>Filters<h4></div><hr>
     <%= render 'filter_form' %>
   </div>
 
   <div class='table-container col s8 m9'>
+    <%= render 'search_form' %>
+
     <% if @mushrooms.present? %>
       <%= render 'table' %>
       <%= paginate @mushrooms %>
-    <% elsif params[:filter].present? %>
+    <% elsif params[:filter].present? || params[:search].present? %>
       <h5 class='title'>No results found. Try another filter.</h5>
       <div class='image-container'>
         <%= image_tag 'mushroom' %>
