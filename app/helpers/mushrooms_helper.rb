@@ -12,4 +12,18 @@ module MushroomsHelper
       'selected'
     end
   end
+
+  def search_query
+    params[:search] && params[:search][:query]
+  end
+
+  def home_partial_path(mushrooms, params)
+    if mushrooms.present?
+      'mushrooms'
+    elsif params[:filter].present? || params[:search].present?
+      'no_results'
+    else
+      'default'
+    end
+  end
 end

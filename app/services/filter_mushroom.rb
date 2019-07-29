@@ -1,6 +1,4 @@
 class FilterMushroom
-  attr_reader :page
-
   def initialize(filter_params, page)
     @page = page
     @mushroom_class = filter_params[:mushroom_class]
@@ -55,6 +53,6 @@ class FilterMushroom
     query = query.where(population: @population) if @population.present?
     query = query.where(habitat: @habitat) if @habitat.present?
 
-    query.page(page)
+    query.page(@page)
   end
 end

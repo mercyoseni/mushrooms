@@ -5,18 +5,7 @@
   </div>
 
   <div class='table-container col s8 m9'>
-    <% if @mushrooms.present? %>
-      <%= render 'table' %>
-      <%= paginate @mushrooms %>
-    <% elsif params[:filter].present? %>
-      <h5 class='title'>No results found. Try another filter.</h5>
-      <div class='image-container'>
-        <%= image_tag 'mushroom' %>
-      </div>
-    <% else %>
-      <div class='image-container'>
-        <%= image_tag 'mushroom-giphy' %>
-      </div>
-    <% end %>
+    <%= render 'search_form' %>
+    <%= render home_partial_path(@mushrooms, params) %>
   </div>
 </div>
