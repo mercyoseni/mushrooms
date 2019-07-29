@@ -39,19 +39,16 @@
 
 ## Screenshots:
 
-### **Homepage - When no filtering**
-<img width="1438" alt="Screenshot 2019-07-28 at 12 15 52 AM" src="https://user-images.githubusercontent.com/26272984/62000403-e3508500-b0cd-11e9-9fc7-d111d0c01994.png">
+### **Homepage - When no filtering or searching**
+<img width="1413" alt="Screenshot 2019-07-29 at 3 45 21 AM" src="https://user-images.githubusercontent.com/26272984/62018620-55e76080-b1b3-11e9-9b4d-8f25229027ea.png">
 
-### **Homepage - Display of `Reset` and `Apply Filter` button**
-<img width="1129" alt="Screenshot 2019-07-28 at 12 16 24 AM" src="https://user-images.githubusercontent.com/26272984/62000404-e3508500-b0cd-11e9-9e69-a67236b37d31.png">
-
-### **When no records found from filtering**
-<img width="1437" alt="Screenshot 2019-07-28 at 12 06 33 AM" src="https://user-images.githubusercontent.com/26272984/62000400-e2b7ee80-b0cd-11e9-9a9b-a7259509912f.png">
+### **When no records found from filtering or searching**
+<img width="1433" alt="Screenshot 2019-07-29 at 3 46 45 AM" src="https://user-images.githubusercontent.com/26272984/62018659-83cca500-b1b3-11e9-9e8f-eeb7297d0147.png">
 
 ### **When records is found from filtering**
 <img width="1418" alt="Screenshot 2019-07-28 at 12 15 22 AM" src="https://user-images.githubusercontent.com/26272984/62000401-e2b7ee80-b0cd-11e9-9e6c-c7ffba6703db.png">
 
-### **Pagination**
+### **Pagination and filter action buttons**
 <img width="1375" alt="Screenshot 2019-07-28 at 12 28 14 AM" src="https://user-images.githubusercontent.com/26272984/62000429-a042e180-b0ce-11e9-96c9-22f18eb92f53.png">
 
 ### **Search**
