@@ -61,4 +61,42 @@ RSpec.describe MushroomsHelper, type: :helper do
       end
     end
   end
+
+  describe '#home_partial_path' do
+    context 'when mushrooms is present' do
+      it "returns 'mushrooms'" do
+        mushrooms = double('mushrooms')
+        params = { }
+
+        expect(home_partial_path(mushrooms, params)).to eq('mushrooms')
+      end
+    end
+
+    context 'when filter params is present' do
+      it "returns 'no_results'" do
+        mushrooms = ''
+        params = { filter: 'mushroom_class' }
+
+        expect(home_partial_path(mushrooms, params)).to eq('no_results')
+      end
+    end
+
+    context 'when search params is present' do
+      it "returns 'no_results'" do
+        mushrooms = ''
+        params = { search: 'edible' }
+
+        expect(home_partial_path(mushrooms, params)).to eq('no_results')
+      end
+    end
+
+    context 'when mushrooms and params are NOT present' do
+      it "returns 'default'" do
+        mushrooms = ''
+        params = { }
+
+        expect(home_partial_path(mushrooms, params)).to eq('default')
+      end
+    end
+  end
 end
