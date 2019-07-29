@@ -2,7 +2,7 @@
   <select name='filter[<%= field.to_s %>][]' id=<%= field.to_s %> multiple>
     <option value='' class='placeholder' disabled><%= placeholder %></option>
     <% mushroom_attributes_values(field).each do |value| %>
-      <option <%= filter_selected?(field, value) %> value=<%= value %>>
+      <option <%= selected_filter(field, value) %> value=<%= value %>>
         <%= value %>
       </option>
     <% end %>

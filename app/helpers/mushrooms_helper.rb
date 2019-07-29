@@ -5,7 +5,7 @@ module MushroomsHelper
     MUSHROOM_ATTRIBUTES[key].values
   end
 
-  def filter_selected?(key, value)
+  def selected_filter(key, value)
     if params[:filter].blank?
       ''
     elsif params[:filter][key]&.include?(value)
