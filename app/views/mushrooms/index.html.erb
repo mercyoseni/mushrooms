@@ -11,7 +11,7 @@
       <%= render 'table' %>
       <%= paginate @mushrooms %>
     <% elsif params[:filter].present? || params[:search].present? %>
-      <h5 class='title'>No results found. Try another filter.</h5>
+      <h6 class='title'>No results found. Try another filter or search.</h6>
       <div class='image-container'>
         <%= image_tag 'mushroom' %>
       </div>
