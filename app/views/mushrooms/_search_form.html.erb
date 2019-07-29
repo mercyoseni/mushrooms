@@ -1,7 +1,7 @@
-<%= form_for :search, url: root_path, method: 'GET' do |f| %>
+<%= form_tag root_path, name: :search, method: :get do %>
   <div class='input-field col s12 search'>
-    <%= f.text_field :query, value: search_query, required: true, placeholder: '🍄 search 🍄' %>
-    <%= f.submit 'Search', class: 'btn right search-btn' %>
+    <%= text_field_tag 'search[query]', search_query, required: true, placeholder: '🍄 search 🍄' %>
+    <%= submit_tag 'Search', class: 'btn right search-btn' %>
     <%= link_to 'Reset', root_path, class: 'btn red search-btn ' %>
   </div>
 <% end %>

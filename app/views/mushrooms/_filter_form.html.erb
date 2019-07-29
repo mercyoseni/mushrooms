@@ -1,4 +1,4 @@
-<%= form_for :filter, url: root_path, method: 'GET', html: { id: 'filter-form' } do |f| %>
+<%= form_tag root_path, name: :filter, method: :get, id: 'filter-form' do %>
   <%# mushroom class %>
   <%= render 'filter_option', field: :mushroom_class, placeholder: 'Select class' %>
 
@@ -68,7 +68,7 @@
   <%# habitat %>
   <%= render 'filter_option', field: :habitat, placeholder: 'Select habitat' %>
 
-  <%= f.submit 'Apply Filter', class: 'btn right' %>
+  <%= submit_tag 'Apply Filter', class: 'btn right' %>
   <%= link_to 'Reset', root_path, class: 'btn red' %>
 <% end %>
 
