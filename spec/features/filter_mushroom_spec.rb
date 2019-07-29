@@ -4,10 +4,10 @@ RSpec.describe 'Filter Mushroom', :js, type: :feature do
   let!(:edible_mushroom) { create(:mushroom, :edible) }
   let!(:poisonous_mushroom) { create(:mushroom, :poisonous) }
 
-  scenario 'filter by mushroom class - edible' do
-    visit root_path
+  before { visit root_path }
 
-    select_field('edible')
+  scenario 'filter by mushroom class - edible' do
+    select_field('mushroom_class', 'edible')
 
     click_on 'Apply Filter'
 
@@ -17,8 +17,7 @@ RSpec.describe 'Filter Mushroom', :js, type: :feature do
   end
 
   scenario 'filter by mushroom class - poisonous' do
-    visit root_path
-    select_field('poisonous')
+    select_field('mushroom_class', 'poisonous')
 
     click_on 'Apply Filter'
 
@@ -28,10 +27,8 @@ RSpec.describe 'Filter Mushroom', :js, type: :feature do
   end
 
   scenario 'filter by mushroom classes - edible and poisonous' do
-    visit root_path
-
-    select_field('edible')
-    select_field('poisonous')
+    select_field('mushroom_class', 'edible')
+    select_field('mushroom_class', 'poisonous')
 
     click_on 'Apply Filter'
 
@@ -41,9 +38,19 @@ RSpec.describe 'Filter Mushroom', :js, type: :feature do
     end
   end
 
-  def select_field(field)
+  scenario 'filter by cap shape - flat' do
+    select_field('cap_shape', 'flat')
+
+    click_on 'Apply Filter'
+
+    expect(page).to have_content(
+      'No results found. Try another filter or search.'
+    )
+  end
+
+  def select_field(attr, field)
     page.execute_script(
-      "$('#mushroom_class option[value=#{ field }]').prop('selected', true)"
+      "$('##{ attr } option[value=#{ field }]').prop('selected', true)"
     )
   end
 end
