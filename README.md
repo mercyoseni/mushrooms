@@ -1,9 +1,9 @@
 # MUSHROOMS
 
-### An app where you can filter different types of mushrooms that meet specific attributes.
-#### Check out [Mushrooms on heroku](https://filter-mushrooms.herokuapp.com/)
+### An app where you can filter and search different types of mushrooms that meet specific attributes.
+#### Check out [Mushrooms on heroku](https://search-and-filter-mushrooms.herokuapp.com/)
 
-## App Main functionalities:
+## Info and Functionalities:
 - From the data provided from UCI Machine Learning repository, mushroom has twenty-three(23) attributes.
 - Each attributes is also classified into its own sub fields.
 - You can filter mushrooms based on the sub fields then click on the `Apply Filter` button to view the results in tabular form.
