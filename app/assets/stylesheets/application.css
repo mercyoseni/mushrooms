@@ -128,3 +128,7 @@ img {
   background-color: #eee;
   padding: 0 15px;
 }
+
+#filter-form {
+  margin: 20px 0;
+}

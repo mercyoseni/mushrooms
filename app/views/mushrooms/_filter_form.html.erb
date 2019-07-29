@@ -1,4 +1,4 @@
-<%= form_for :filter, url: root_path, method: 'GET' do |f| %>
+<%= form_for :filter, url: root_path, method: 'GET', html: { id: 'filter-form' } do |f| %>
   <%# mushroom class %>
   <%= render 'filter_option', field: :mushroom_class, placeholder: 'Select class' %>
 
