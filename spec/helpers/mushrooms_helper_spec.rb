@@ -53,9 +53,9 @@ RSpec.describe MushroomsHelper, type: :helper do
       end
     end
 
-    context 'when query params is NOT present' do
+    context 'when search param is present AND query params is NOT present' do
       it 'returns nil' do
-        params = { search: {  } }
+        params = { search: { key: 'value' } }
 
         expect(search_query).to be_nil
       end
