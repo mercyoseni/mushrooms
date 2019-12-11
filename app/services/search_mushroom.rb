@@ -1,7 +1,7 @@
 class SearchMushroom
   def initialize(search_params, page)
     @page = page
-    @search_params = search_params.split(',')
+    @search_params = search_params
   end
 
   def run
@@ -41,6 +41,6 @@ class SearchMushroom
   private
 
   def formatted_params
-    @search_params.map { |value| "%#{ value.strip }%" }
+    @search_params.split(',').map { |value| "%#{ value.strip }%" }
   end
 end
